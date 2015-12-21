@@ -1,10 +1,15 @@
 <div class="rxDatePicker wrapper">
-  <div class="control" ng-click="toggleCalendar()">
+  <div class="control" ng-click="togglePopup()">
     <span class="displayValue">{{ displayValue }}</span>
     <i class="icon fa fa-fw fa-calendar"></i>
   </div>
 
-  <div class="popup" ng-if="calendarVisible">
+  <rx-backdrop
+    ng-if="popupVisible"
+    ng-click="closePopup()">
+  </rx-backdrop>
+
+  <div class="popup" ng-if="popupVisible">
     <nav>
       <span
         class="arrow prev fa fa-lg fa-angle-double-left"

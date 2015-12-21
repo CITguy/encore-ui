@@ -1,0 +1,16 @@
+<div ng-controller="rxBackdropSimpleCtrl">
+  <button class="button"
+    ng-click="openBackdrop()">
+
+    Show Backdrop
+  </button>
+
+  <p>
+    Click anywhere on the translucent gray to close the backdrop.
+  </p>
+
+  <rx-backdrop
+    ng-if="showBackdrop"
+    ng-click="closeBackdrop()">
+  </rx-backdrop>
+</div>

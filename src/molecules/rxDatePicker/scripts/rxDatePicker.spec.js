@@ -56,8 +56,8 @@ describe('rxDatePicker', function () {
                 expect(isoScope.displayValue).to.eq('December 15, 2015');
             });
 
-            it('should set calendarVisible to false', function () {
-                expect(isoScope.calendarVisible).to.eq(false);
+            it('should set popupVisible to false', function () {
+                expect(isoScope.popupVisible).to.eq(false);
             });
 
             it('should set calendarMonth to beginning of this month', function () {
@@ -110,19 +110,19 @@ describe('rxDatePicker', function () {
                 });
             });//calendarDays
 
-            describe('toggleCalendar()', function () {
-                it('should change calendarVisible to true, false, true', function () {
+            describe('togglePopup()', function () {
+                it('should change popupVisible to true, false, true', function () {
                     // toggle true
-                    isoScope.toggleCalendar();
-                    expect(isoScope.calendarVisible).to.eq(true);
+                    isoScope.togglePopup();
+                    expect(isoScope.popupVisible).to.eq(true);
                     // back to false
-                    isoScope.toggleCalendar();
-                    expect(isoScope.calendarVisible).to.eq(false);
+                    isoScope.togglePopup();
+                    expect(isoScope.popupVisible).to.eq(false);
                     // back to true
-                    isoScope.toggleCalendar();
-                    expect(isoScope.calendarVisible).to.eq(true);
+                    isoScope.togglePopup();
+                    expect(isoScope.popupVisible).to.eq(true);
                 });
-            });//toggleCalendar()
+            });//togglePopup()
 
             describe('isSelected()', function () {
                 var stressDay;
@@ -194,11 +194,11 @@ describe('rxDatePicker', function () {
                         expect(isoScope.selected).to.eq('2016-02-14');
                     });
 
-                    it('should set calendarVisible to false', function () {
-                        isoScope.toggleCalendar();
-                        expect(isoScope.calendarVisible).to.eq(true);
+                    it('should set popupVisible to false', function () {
+                        isoScope.togglePopup();
+                        expect(isoScope.popupVisible).to.eq(true);
                         isoScope.selectDate(valentines);
-                        expect(isoScope.calendarVisible).to.eq(false);
+                        expect(isoScope.popupVisible).to.eq(false);
                     });
 
                     it('should set calendar month to February 2016', function () {
@@ -331,15 +331,15 @@ describe('rxDatePicker', function () {
                 rendered = renderDirective(scope);
             });
 
-            describe('toggleCalendar()', function () {
+            describe('togglePopup()', function () {
                 it('should not modify calendarVisibility', function () {
-                    isoScope.toggleCalendar();
-                    expect(isoScope.calendarVisible).to.eq(false);
+                    isoScope.togglePopup();
+                    expect(isoScope.popupVisible).to.eq(false);
 
-                    isoScope.toggleCalendar();
-                    expect(isoScope.calendarVisible).to.eq(false);
+                    isoScope.togglePopup();
+                    expect(isoScope.popupVisible).to.eq(false);
                 });
-            });//toggleCalendar()
+            });//togglePopup()
         });
     });
 });

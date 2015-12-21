@@ -1,0 +1,7 @@
+{
+    "displayName": "rxBackdrop",
+    "stability": "stable",
+    "description": "Common backdrop for use with popup-style directives",
+    "hasApi": false,
+    "keywords": []
+}

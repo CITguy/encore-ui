@@ -35,16 +35,20 @@ angular.module('encore.ui.molecules')
             var today = moment(new Date());
             var isoFormat = 'YYYY-MM-DD';
 
-            scope.calendarVisible = false;
+            scope.popupVisible = false;
             // keep track of which month we're viewing in the popup (default to 1st of this month)
             scope.calendarMonth = today.clone().startOf('month');
 
             /* ===== "Public" Functions ===== */
-            scope.toggleCalendar = function () {
+            scope.togglePopup = function () {
                 if (_.isUndefined(attrs.disabled)) {
-                    scope.calendarVisible = !scope.calendarVisible;
+                    scope.popupVisible = !scope.popupVisible;
                 }
-            };//toggleCalendar()
+            };//togglePopup()
+
+            scope.closePopup = function () {
+                scope.popupVisible = false;
+            };//closePopup
 
             /**
              * @param {String} destination
@@ -70,7 +74,7 @@ angular.module('encore.ui.molecules')
              */
             scope.selectDate = function (date) {
                 scope.selected = date.format(isoFormat);
-                scope.calendarVisible = false;
+                scope.popupVisible = false;
             };//selectDate()
 
             /**
