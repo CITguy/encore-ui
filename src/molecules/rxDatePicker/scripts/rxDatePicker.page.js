@@ -15,14 +15,11 @@ var rxDatePicker = {
         }
     },
 
-    /**
-     * @function
-     * @description fetch display value (as seen in fake control element)
-     * @return {String}
-     */
-    txtDisplayValue: {
+    displayValue: {
         get: function () {
-            return this.rootElement.$('.displayValue').getText();
+            return this.rootElement.$('.displayValue').getAttribute('value').then(function (val) {
+                return val;
+            });
         }
     },
 

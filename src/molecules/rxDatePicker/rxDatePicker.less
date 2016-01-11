@@ -18,26 +18,41 @@ rx-date-picker {
   &,
   &.ng-valid {
     .control {
-      .flexCentered();
       background-color: @control-background-color;
       border: 1px solid @control-border-color;
       box-sizing: border-box;
       color: @control-text-color;
       cursor: @control-cursor;
-      flex-flow: row nowrap;
       height: @control-height;
+      overflow: hidden;
       padding: @control-padding-x @control-padding-y;
+      position: relative;
 
       .displayValue {
-        flex: 1;
+        background-color: transparent;
       }
 
-      .icon {
-        color: @control-icon-color;
-        flex: 0 0 @control-icon-width;
-        margin-left: @control-gutter;
-      }
-    }
+      .overlay {
+        align-items: center;
+        background-color: transparent;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100%;
+        justify-content: flex-end;
+        left: 0;
+        padding: @control-padding-x @control-padding-y;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        .icon {
+          color: @control-icon-color;
+          flex: 0 0 @control-icon-width;
+          margin-left: @control-gutter;
+        }//.icon
+      }//.overlay
+    }//.control
   }
 
   &.ng-invalid.ng-dirty {
@@ -49,7 +64,7 @@ rx-date-picker {
       .icon {
         color: @invalid-control-icon-color;
       }
-    }
+    }//.control
   }
 
   // Disabled styles should trump all other styles

@@ -16,7 +16,7 @@ describe('rxDatePicker', function () {
         });
 
         it('should display "November 17, 2015" as selected date', function () {
-            expect(picker.txtDisplayValue).to.eventually.eq('November 17, 2015');
+            expect(picker.displayValue).to.eventually.eq('November 17, 2015');
         });
 
         it('should not be disabled', function () {
@@ -102,7 +102,7 @@ describe('rxDatePicker', function () {
                 });
 
                 it('should not change control display value', function () {
-                    expect(picker.txtDisplayValue).to.eventually.eq('November 17, 2015');
+                    expect(picker.displayValue).to.eventually.eq('November 17, 2015');
                 });
 
                 it('should not change current picker month', function () {
@@ -121,7 +121,7 @@ describe('rxDatePicker', function () {
                 });
 
                 it('should change control display value', function () {
-                    expect(picker.txtDisplayValue).to.eventually.eq('November 05, 2015');
+                    expect(picker.displayValue).to.eventually.eq('November 05, 2015');
                 });
 
                 it('should not change current picker month', function () {

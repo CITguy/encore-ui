@@ -1,7 +1,12 @@
 <div class="rxDatePicker wrapper">
   <div class="control" ng-click="toggleCalendar()">
-    <span class="displayValue">{{ displayValue }}</span>
-    <i class="icon fa fa-fw fa-calendar"></i>
+    <input type="text"
+      class="displayValue"
+      ng-model="displayValue" />
+
+    <div class="overlay">
+      <i class="icon fa fa-fw fa-calendar"></i>
+    </div>
   </div>
 
   <div class="popup" ng-if="calendarVisible">
