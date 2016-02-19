@@ -37,7 +37,7 @@
     cursor: pointer;
 
     // reset native styling
-    border: none !important;
+    border: 0 !important;
     outline: none !important;
     background: transparent;
     &:-moz-focusring {
@@ -53,7 +53,7 @@
     }
 
     .disabled() {
-      cursor: not-allowed ;
+      cursor: not-allowed;
 
       & + .fake-select {
         border-color: @rxSelect-border-color-disabled;
@@ -61,7 +61,7 @@
 
         .select-trigger {
           background: @rxSelect-background-disabled;
-          border-left-width: 0px;
+          border-left-width: 0;
           border-left-color: @rxSelect-color-disabled;
           color: @rxSelect-trigger-color-disabled;
         }

@@ -1,0 +1,138 @@
+// OPTIONS: https://github.com/lesshint/lesshint/blob/master/lib/linters/README.md
+{
+    "fileExtensions": [".less", ".css"],
+    "excludedFiles": [
+        /*
+         * Ignoring these three until upstream dependency fixes support for
+         * guarded mixins.
+         *
+         * https://github.com/tonyganch/gonzales-pe/issues/121
+         */
+        "flexbox.less",
+        "mixins.less",
+        "layout.less",
+        // upstream dep choking on IE filter
+        "progressbar.less"
+    ],
+    "attributeQuotes": {
+        "enabled": true,
+        "style": "double"
+    },
+    "borderZero": {
+        "enabled": true,
+        "style": "zero"
+    },
+    "comment": {
+        "enabled": false
+    },
+    "decimalZero": {
+        "enabled": true,
+        "style": "leading"
+    },
+    "duplicateProperty": {
+        "enabled": true
+    },
+    "emptyRule": {
+        "enabled": true
+    },
+    "finalNewline": {
+        "enabled": true
+    },
+    "hexLength": {
+        "enabled": true,
+        "style": "long"
+    },
+    "hexNotation": {
+        "enabled": true,
+        "style": "lowercase"
+    },
+    "hexValidation": {
+        "enabled": true
+    },
+    "idSelector": {
+        "enabled": false
+    },
+    "importantRule": {
+        "enabled": false // no way to ignore rules that SHOULD have !important
+    },
+    "importPath": {
+        "enabled": false
+    },
+    "propertyOrdering": {
+        "enabled": false
+    },
+    "propertyUnits": {
+        "enabled": false,
+        "global": ["px", "%", "em"]
+    },
+    "qualifyingElement": {
+        "allowWithAttribute": true,
+        "allowWithClass": true,
+        "allowWithId": false
+    },
+    "selectorNaming": {
+        "disallowUppercase": true,
+        "disallowUnderscore": true,
+        "disallowDash": false,
+        "exclude": []
+    },
+    "singleLinePerProperty": {
+        "enabled": true
+    },
+    "singleLinePerSelector": {
+        "enabled": true
+    },
+    "spaceAfterPropertyColon": {
+        "enabled": true,
+        "style": "one_space"
+    },
+    "spaceAfterPropertyName": {
+        "enabled": true,
+        "style": "no_space"
+    },
+    "spaceAfterPropertyValue": {
+        "enabled": true,
+        "style": "no_space"
+    },
+    "spaceAroundComma": {
+        "enabled": true,
+        "style": "after"
+    },
+    /* As of 1.3.1 this is returning false negatives when it comes across
+     * negative numbers in calculations or shorthand.
+     *
+     * https://github.com/lesshint/lesshint/issues/129
+     */
+    "spaceAroundOperator": {
+        "enabled": false, // disabled until lesshint#129 fixed
+        "style": "both"
+    },
+    "spaceBeforeBrace": {
+        "enabled": true,
+        "style": "one_space"
+    },
+    "spaceBetweenParens": {
+        "enabled": true,
+        "style": "no_space"
+    },
+    "stringQuotes": {
+        "enabled": true,
+        "style": "double"
+    },
+    "trailingSemicolon": {
+        "enabled": true
+    },
+    "trailingWhitespace": {
+        "enabled": true
+    },
+    "urlFormat": { // we want both
+        "enabled": false
+    },
+    "urlQuotes": {
+        "enabled": true
+    },
+    "zeroUnit": {
+        "enabled": true,
+        "style": "no_unit"
+    }
+}

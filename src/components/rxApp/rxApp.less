@@ -1,12 +1,12 @@
-@import 'vars';
-@import 'mixins';
+@import "vars";
+@import "mixins";
 
 .account-users {
   box-sizing: border-box;
 }
 
 .rx-app {
-  @navTransitionDuration: .2s;
+  @navTransitionDuration: 0.2s;
   @appMenuWidth: 300px;
 
   min-height: 100%;
@@ -48,7 +48,7 @@
     }
     .site-options {
       float: right;
-      font-size: .8em;
+      font-size: 0.8em;
       margin-top: 1px;
 
       .site-option {
@@ -243,7 +243,7 @@
       }
       &:before,
       &:after {
-        content: '';
+        content: "";
         position: absolute;
       }
       &:after {
@@ -278,7 +278,7 @@
       transform: rotate(90deg) scaleX(1);
       top: 50%;
       line-height: 0;
-      right: .45em;
+      right: 0.45em;
     }
 
     // active nav, w/children (double arrow up, gray bg)
@@ -469,7 +469,7 @@
       right: 0;
       width: 30px;
       height: 100%;
-      background: url(images/magnifying-glass.png) no-repeat 50% 50%;
+      background: url("images/magnifying-glass.png") no-repeat 50% 50%;
       border: 0;
       opacity: 0.2;
     }
@@ -488,7 +488,7 @@
     border-top: 1px solid @gray-900;
     line-height: 3em;
     padding-bottom: 1px;
-    font-size: .8em;
+    font-size: 0.8em;
     text-shadow: 1px 1px 0px rgba(26, 26, 26, 0.2);
 
     .rx-feedback .modal-link {
@@ -504,7 +504,7 @@
   // TODO: Update to 2.0 Color Variables
   .page-header {
     background: linear-gradient(to bottom, #e7e7e7 0%, #d6d6d6 100%);
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #bbbbbb;
   }
 
   .page-body {
@@ -527,9 +527,9 @@
     }
 
     & > .rx-notifications {
-      position:fixed;
+      position: fixed;
       z-index: 20;  // accommodate rxSelect .fake-select class
-      top: 0px;
+      top: 0;
       left: 300px;
       right: 100px;
       opacity: 0.95;
@@ -553,7 +553,8 @@
 }
 
 .status-tag {
-  &.alpha-status, &.beta-status {
+  &.alpha-status,
+  &.beta-status {
     margin-left: 10px;
     text-transform: uppercase;
     font-size: 9px;

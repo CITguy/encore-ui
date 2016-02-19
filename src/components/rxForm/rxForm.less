@@ -2,8 +2,8 @@
  * rxForm
  */
 
-@import 'vars';
-@import 'mixins';
+@import "vars";
+@import "mixins";
 
 /* Form Fields & Fieldsets */
 
@@ -161,9 +161,9 @@
   select {
     width: 100%;
     margin: 0;
-    .border-radius(0px);
-    background: #fff;
-    border: none;
+    .border-radius(0);
+    background: @white;
+    border: 0;
     outline: none;
     display: inline-block;
     -webkit-appearance: none;
@@ -175,12 +175,12 @@
 
   &:before {
     // background so long text doesn't show behind caret
-    content: '';
+    content: "";
     right: 1px;
     top: 1px;
     width: 20px;
     height: 93%;
-    background: #fff;
+    background: @white;
     position: absolute;
     pointer-events: none;
     display: block;
@@ -188,10 +188,10 @@
 
   &:after {
     // down caret from font awesome
-    content: '\f0d7';
+    content: "\f0d7";
     font-family: FontAwesome;
     font-size: 15px;
-    color: #aaa;
+    color: #aaaaaa;
     right: 10px;
     top: 7px;
     padding: 0;
@@ -247,7 +247,7 @@
     flex: 1 auto;
 
     .form-item {
-      padding: 0px 3px;
+      padding: 0 3px;
       flex: 1;
     }
   }
@@ -302,7 +302,7 @@ input,
 textarea,
 select {
   box-sizing: border-box;
-  border: none;
+  border: 0;
   outline: none;
 }
 
@@ -316,8 +316,8 @@ rx-inline-error,
 rx-help-text {
   box-sizing: border-box;
   display: block;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 rx-inline-error {
@@ -337,8 +337,8 @@ rx-field-name {
 
   .wrapper {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 
     .required-symbol {
       font-weight: 900;
@@ -357,7 +357,9 @@ rx-field-name {
   rx-input {
     margin-bottom: (@rxForm-gutter / 2);
 
-    &:last-child { margin-bottom: 0px; }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   rx-form-section {
@@ -366,11 +368,11 @@ rx-field-name {
     flex-flow: row wrap;
     justify-content: flex-start;
 
-    margin: 0px (@rxForm-gutter / 2);
+    margin: 0 (@rxForm-gutter / 2);
 
     & > div,
     rx-field {
-      margin: 0px (@rxForm-gutter / 2) (@rxForm-gutter * 1.25);
+      margin: 0 (@rxForm-gutter / 2) (@rxForm-gutter * 1.25);
 
       // http://www.w3.org/TR/css3-flexbox/images/rel-vs-abs-flex.svg
       // as dynamic flex item (3rd arg acts like min-width)
@@ -388,7 +390,7 @@ rx-field-name {
         margin-bottom: @rxForm-gutter;
 
         &:last-child {
-          margin-bottom: 0px;
+          margin-bottom: 0;
         }
 
         .validInput() {
@@ -418,7 +420,7 @@ rx-field-name {
           align-items: stretch;
 
          .button {
-            margin-bottom: 0px;
+            margin-bottom: 0;
           }
 
           & > input,
@@ -427,7 +429,8 @@ rx-field-name {
 
             min-height: @rxForm-input-min-height;
 
-            &, &.ng-valid {
+            &,
+            &.ng-valid {
               .validInput();
             }
 
@@ -452,7 +455,7 @@ rx-field-name {
           rx-suffix {
             box-sizing: border-box;
             min-height: @rxForm-input-min-height;
-            padding: 0px (@rxForm-gutter / 4);
+            padding: 0 (@rxForm-gutter / 4);
             flex: 0 0 auto; // as static flex item
 
             // as flex container
@@ -461,10 +464,10 @@ rx-field-name {
           }
 
           rx-prefix:first-child {
-            padding-left: 0px;
+            padding-left: 0;
           }
           rx-suffix:last-child {
-            padding-right: 0px;
+            padding-right: 0;
           }
 
           /* ===== Other Directive Support ===== */
@@ -543,10 +546,10 @@ rx-field-name {
         margin: 2px;
 
         &:first-of-type {
-          margin-left: 0px;
+          margin-left: 0;
         }
         &:last-of-type {
-          margin-right: 0px;
+          margin-right: 0;
         }
       }
     }
